@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name = "dav.learn.hibernate.test.Employee" table = "employee">
+
+        <meta attribute = "class-description">
+          This class contains an employee details.
+        </meta>
+
+        <id name = "id" type = "int" column = "id">
+          <generator class = "identity"/>
+        </id>
+
+        <set name = "certificates" cascade = "all">
+          <key column = "employee_id"/>
+          <one-to-many class = "dav.learn.hibernate.test.Certificate"/>
+        </set>
+
+        <property name = "firstName" type = "string" column = "first_name"/>
+        <property name = "lastName" type = "string" column = "last_name"/>
+        <property name = "salary" type = "int" column = "salary"/>
+
+    </class>
+
+    <class name = "dav.learn.hibernate.test.Certificate" table = "certificate">
+
+      <meta attribute = "class-description">
+        This class contains a certificate info.
+      </meta>
+
+      <id name = "id" type = "int" column = "id">
+        <generator class = "identity"/>
+      </id>
+
+      <property name = "name" type = "string" column = "certificate_name"/>
+
+    </class>
+
+</hibernate-mapping>

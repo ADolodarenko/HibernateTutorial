@@ -1,0 +1,1 @@
+javac -Xlint:deprecation -cp C:\Java\lib\postgresql-9.4-1202.jdbc41.jar;C:\Java\lib\hibernate-release-4.2.21.Final\lib\required\hibernate-core-4.2.21.Final.jar src\dav\learn\hibernate\test\* -d target

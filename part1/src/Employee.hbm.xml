@@ -4,20 +4,20 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name = "Employee" table = "employee">
+    <class name = "dav.learn.hibernate.test.Employee" table = "employee">
 
         <meta attribute = "class-description">
           This class contains an employee details.
         </meta>
 
         <id name = "id" type = "int" column = "id">
-          <generator class = "native"/>
+          <generator class = "identity"/>
         </id>
 
         <property name = "firstName" type = "string" column = "first_name"/>
         <property name = "lastName" type = "string" column = "last_name"/>
         <property name = "salary" type = "int" column = "salary"/>
-        
+
     </class>
 
 </hibernate-mapping>
